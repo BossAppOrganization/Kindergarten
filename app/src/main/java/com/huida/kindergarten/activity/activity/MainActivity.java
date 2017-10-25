@@ -1,7 +1,9 @@
-package com.huida.kindergarten;
+package com.huida.kindergarten.activity.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.huida.kindergarten.R;
 
 public class MainActivity extends Activity {
     
