@@ -1,20 +1,14 @@
 package com.huida.kindergarten.activity.fragment;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.database.DataSetObserver;
-import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.huida.kindergarten.R;
-import com.huida.kindergarten.activity.activity.MainActivity;
 import com.huida.kindergarten.activity.activity.recopeActivity;
 
 import java.util.ArrayList;
@@ -91,7 +85,7 @@ public class fragment_class extends BaseFragment {
          public View getView(int position, View convertView, ViewGroup parent) {
              ViewHolder holder;
           if(convertView==null){
-              convertView = View.inflate(mActivity, R.layout.class_item, null);
+              convertView = View.inflate(mActivity, R.layout.activity_class_listview_item, null);
 
                holder = new ViewHolder();
               holder.tv_class_text = (TextView) convertView.findViewById(R.id.tv_class_text);
