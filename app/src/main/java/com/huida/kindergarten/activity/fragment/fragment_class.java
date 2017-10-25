@@ -2,17 +2,20 @@ package com.huida.kindergarten.activity.fragment;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.huida.kindergarten.R;
 import com.huida.kindergarten.activity.activity.MainActivity;
+import com.huida.kindergarten.activity.activity.recopeActivity;
 
 import java.util.ArrayList;
 
@@ -28,17 +31,25 @@ public class fragment_class extends BaseFragment {
     private MyAdapter adapter;
     private ArrayList<String> list;
     private String text[]={"小赵","小钱","小孙","小李","小赵"};
+    private Button recope;
 
     @Override
     public View initView() {
         View view = View.inflate(mActivity, R.layout.activity_class, null);
         lv_class_teacher = (ListView) view.findViewById(R.id.lv_class_teacher);
+        recope = (Button) view.findViewById(R.id.bt_class_recope);
+
         return view;
     }
 
     @Override
     protected void initListener() {
-
+           recope.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   Intent intent = new Intent(mActivity, recopeActivity.class);
+               }
+           });
     }
 
     @Override
